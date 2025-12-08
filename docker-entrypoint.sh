@@ -1,10 +1,8 @@
 #!/bin/bash
 set -e
 
-# إنشاء مجلد config
 mkdir -p /root/.config/rclone
 
-# إنشاء rclone.conf ديناميكيًا
 cat > /root/.config/rclone/rclone.conf <<EOF
 [r2]
 type = s3
