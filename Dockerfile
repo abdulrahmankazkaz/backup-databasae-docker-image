@@ -4,7 +4,7 @@ ENV TZ=Asia/Baghdad
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt update && \
-    apt install -y --no-install-recommends mariadb-client rclone && \
+    apt install -y --no-install-recommends mariadb-client s3cmd && \
     pip3.13 install yacron && \
     apt clean && rm -rf /var/lib/apt/lists/*
 

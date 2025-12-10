@@ -27,7 +27,6 @@ AWS_SECRET_ACCESS_KEY=your-secret-key
 
 ## Docker Compose Example
 ```yaml
-version: "3.9"
 services:
   backup:
     image: ghcr.io/abdulrahmankazkaz/db-backup:latest
