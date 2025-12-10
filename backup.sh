@@ -18,7 +18,7 @@ echo "[$(date)] Starting backup for table $TABLE_NAME..."
 
 mysqldump -h "$DB_HOST" -u "$DB_USER" -p"$DB_PASSWORD" "$TABLE_NAME" | gzip > "$FILE_PATH"
 
-s3md put "$FILE_PATH" "S3://${DIR_NAME}//${FILE_NAME}"
+s3cmd put "$FILE_PATH" "S3://${DIR_NAME}//${FILE_NAME}"
 
 rm -f "$FILE_PATH"
 
